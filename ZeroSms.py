@@ -7,8 +7,8 @@ http://www.way2sms.com/user-registration
 
 ##import zerosms
 ##
-##sender_number = 7738478888
-##password = 'Priyam112@'
+##sender_number = phno
+##password = password
 ##msg = input("Enter Sms Message " )
 ##receiver_number = int(input("Enter Receiver's Number "))
 ##
@@ -121,7 +121,7 @@ def sms(phno,passwd,receivernum,message):
 		print("Error : " ,e)
 
 
-sms(7738478888,'Priyam112@',7738478888,'Hi Priyam')
+sms('Enter your registered number',password,'Receiver Number','Hi Priyam')
 
 
 def futuresms(phno,passwd,receivernum,set_date,set_time,message):
