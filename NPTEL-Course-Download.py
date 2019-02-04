@@ -16,10 +16,14 @@ def nptel(link):
             print("https://nptel.ac.in"+link.get('href'))
             print('Downloading')
             n = str(count) + str('.mp4')
+            done = 0
+            file_size = float(response.headers['content-length'])
             with open(n,'wb') as f:
                 for chunk in r.iter_content(chunk_size = 1024*1024):
                     if chunk:
                         f.write(chunk)
+                        done += len(chunk)
+                        print('progress ',float(file_size/done),' percent')
             print('Downloaded 1 video in current directory!')
     print('Total Videos',count)
 nptel('https://nptel.ac.in/courses/nptel_download.php?subjectid=106105184')
